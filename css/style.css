@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Regular.woff2') format('woff2'), url('../fonts/Rubik-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: url('../fonts/RussoOne-Regular.woff2') format('woff2'), url('../fonts/RussoOne-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #ffffff;
+    --btn-color: #2760AE;
+    --btn-active: #1e4781;
+    --offset: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: block;
+}
+
+body {
+    position: relative;
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+}
+
+input, textarea, button, label {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: 1770px;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-text {
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+.reset-btn {
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--btn-color);
+    color: var(--main-color);
+    width: 208px;
+    height: 50px;
+    font-family: Russo One;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    box-shadow: -6px 6px 17px rgba(1, 11, 11, 0.26);
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--btn-active);
+}
+
+.btn:active {
+    background-color: var(--btn-active);
+}
+
+.leaf {
+    position: fixed;
+    right: 0px;
+    bottom: 150px;
+    transform: rotate(-90deg);
+    animation: 1.5s infinite alternate arrowbottom;
+}
+
+.leaf__title:before {
+    content: '';
+    background-image: url('../img/icons/arrow-left.png');
+    padding-right: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@keyframes arrowbottom {
+    from {
+        bottom: 150px;
+    }
+    to {
+        bottom: 190px;
+    }
+}
+
+/* burger-comment */
+
+.burger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+.burger__line {
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.burger__line:nth-child(1) {
+    right: 0;
+    left: 0;
+    top: 15px;
+    margin-bottom: 8px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.burger__line:nth-child(2) {
+    right: 0;
+    left: 0;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.burger__line:nth-child(3) {
+    right: 0;
+    left: 0;
+    width: 55%;
+    margin: 0 auto;
+    bottom: 15px;
+}
+
+/* burger-comment */
+
+/* header */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 999;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 30px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__item {
+    transition: border-bottom 0.3s ease-in-out;
+    padding: 5px 0;
+}
+
+.header__item:hover {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.header__item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.header__link-active {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.header__mail {
+    margin-right: 30px;
+}
+
+.header__phone {
+    margin-right: 30px;
+}
+
+.header__mail::before {
+    content: '';
+    background-image: url('../img/icons/mail.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+
+.header__phone::before {
+    content: '';
+    background-image: url('../img/icons/mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+
+.header__button {
+    margin-right: 30px;
+}
+
+/* header */
+
+/* hero */
+
+.hero {
+    background-image: url('../img/background/hero-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: 720px;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title {
+    text-transform: uppercase;
+    font-size: 130px;
+    font-family: Russo One;
+    line-height: 110%;
+    position: relative;
+    text-align: center;
+}
+
+.hero__title:before {
+    content: '';
+    background-image: url('../img/photoshop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -70px;
+    left: -180px;
+    width: 200px;
+    height: 200px;
+}
+
+.hero__title:after {
+    content: '';
+    background-image: url('../img/iphone.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -140px;
+    right: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.hero__title-span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px var(--main-color);
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    font-family: Russo One;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero__subtitle::before {
+    content: '';
+    margin-right: 30px;
+    width: 50px;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+.hero__subtitle::after {
+    content: '';
+    margin-left: 30px;
+    width: 50px;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+.hero__descr {
+    position: absolute;
+    bottom: 30px;
+    left: var(--offset);
+    width: 45%;
+}
+
+.hero__list {
+    display: flex;
+    align-items: center;
+}
+
+.hero__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.hero__item-title {
+    font-family: Russo One;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.hero__item-subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    color: #BABABA;
+}
+
+/* hero */
+
+/* advantages */
+
+.advantages {
+    height: 100vh;
+    background-color: #101f30;
+    min-height: 720px;
+}
+
+.advantages__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-image: url('../img/macbook.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;
+    
+}
+
+.advantages__wrapper {
+    width: 60%;
+}
+
+.advantages__title {
+    font-family: Russo One;
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.advantages__title-span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+}
+
+.advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advantages__item {
+    width: 49%;
+}
+
+.advantages__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.advantages__item-title {
+    font-family: Russo One;
+    font-size: 16px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.advantages__item-descr {
+    font-family: Rubik;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BABABA;
+}
+
+.advantages__right {
+    width: 40%;
+    background-image: url('../img/macbook.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.advantages__link {
+    position: relative;
+    padding-left: 70px;
+}
+
+.advantages__arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 15px;
+    background-image: url('../img/icons/arrow-left.png');
+    transform: rotate(180deg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/* advantages */
