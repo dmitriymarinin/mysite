@@ -130,7 +130,7 @@ input, textarea, button, label {
 
 .consultation-wrapper {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     right: 110px;
     max-width: 208px;
     display: flex;
@@ -160,27 +160,65 @@ input, textarea, button, label {
     height: 45px;
 }
 
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.modal-visible {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
 .modal-form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
     justify-content: center;
     height: 100vh;
 }
 
-.overlay {
+.modal-overlay {
     opacity: 0;
     visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #101C29;
     z-index: 999;
     transition: .3s all;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.modal-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.modal-close {
+    position: absolute;
+    right: 110px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+.disable-scroll {
+    padding-right: 15px;
+    overflow: hidden;
 }
 
 textarea {
@@ -188,14 +226,6 @@ textarea {
 }
 
 /* modal */
-
-.modal-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* justify-content: center; */
-    max-width: 600px;
-}
 
 .modal-wrapper {
     display: flex;
@@ -209,10 +239,14 @@ textarea {
     width: 60%;
 }
 
+.modal-logo {
+    margin-bottom: 30px;
+}
+
 .modal-form__right {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 50px;
 }
 
@@ -499,7 +533,7 @@ textarea {
 
 .hero__descr {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     left: var(--offset);
     width: 45%;
 }

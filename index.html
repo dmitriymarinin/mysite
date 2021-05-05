@@ -49,7 +49,7 @@
             <div class="header__right">
                 <a href="mailto:info@gmail.com" class="header__mail main-text">info@gmail.com</a>
                 <a href="tel:79017920866" class="header__phone main-text">+7 (901) - 792 - 08 - 66</a>
-                <button class="header__button btn reset-btn">Связаться с нами</button>
+                <button class="header__button btn reset-btn" data-path="form-popup">Связаться с нами</button>
                 <button class="header__burger burger reset-btn" aria-label="Открыть меню">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
@@ -169,40 +169,76 @@
         </div>
     </main>
 
-    <div class="overlay">
-        <div class="modal-form">
-            <span class="modal-form__title">Dmweb</span>
-            <div class="modal-wrapper">
-                <div class="modal-form__left">
-                    <span class="modal__form-descr main-text">
-                        Хотите сделать что-нибудь отличное? Позвольте вам помочь. Мы составим план,
-                        и подготовим предложение.
-                    </span>
-                    <span class="modal__form-descr main-text">
-                        Готовы? Свяжитесь с нами сегодня.
-                    </span>
-                    <form action="#" class="modal-form__form">
-                        <input type="text" class="form-input" placeholder="Имя" name="name">
-                        <input type="mail" class="form-input" placeholder="Email" name="email">
-                        <textarea name="text" id="" cols="30" rows="1" placeholder="Ваш текст"
-                            class="form-input form-textarea"></textarea>
-                        <button class="form-button btn reset-btn" type="submit">Отправить</button>
-                    </form>
-                </div>
-                <div class="modal-form__right">
-                    <img src="#" alt="" class="modal-logo">logo
-                    <span class="modal-contacts">Наши контакты</span>
-                    <a href="tel:79017920866" class="modal-phone main-text">+7 (901) 792 08 66</a>
-                    <a href="mailto:info@gmail.com" class="modal-email main-text">info@gmail.com</a>
+    <div class="modals">
+        <div class="modal-overlay">
+            <div class=" modal modal--1" data-target="form-popup">
+                <span class="modal-form__title">Dmweb</span>
+                <div class="modal-wrapper">
+                    <div class="modal-form__left">
+                        <span class="modal__form-descr main-text">
+                            Хотите сделать что-нибудь отличное? Позвольте вам помочь. Мы составим план,
+                            и подготовим предложение.
+                        </span>
+                        <span class="modal__form-descr main-text">
+                            Готовы? Свяжитесь с нами сегодня.
+                        </span>
+                        <form action="#" class="modal-form__form">
+                            <input type="text" class="form-input" placeholder="Имя" name="name">
+                            <input type="mail" class="form-input" placeholder="Email" name="email">
+                            <textarea name="text" id="" cols="30" rows="1" placeholder="Ваш текст"
+                                class="form-input form-textarea"></textarea>
+                            <button class="form-button btn reset-btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="modal-form__right">
+                        <img src="img/logomodal.png" alt="" class="modal-logo">
+                        <span class="modal-contacts">Наши контакты</span>
+                        <a href="tel:79017920866" class="modal-phone main-text">+7 (901) 792 08 66</a>
+                        <a href="mailto:info@gmail.com" class="modal-email main-text">info@gmail.com</a>
+                    </div>
                 </div>
             </div>
+
+            <div class=" modal modal--2" data-target="form-consult">
+                <span class="modal-form__title">Dmweb</span>
+                <div class="modal-wrapper">
+                    <div class="modal-form__left">
+                        <span class="modal__form-descr main-text">
+                            Хотите сделать что-нибудь отличное? Позвольте вам помочь. Мы составим план,
+                            и подготовим предложение.
+                        </span>
+                        <span class="modal__form-descr main-text">
+                            Готовы? Свяжитесь с нами сегодня.
+                        </span>
+                        <form action="#" class="modal-form__form">
+                            <input type="text" class="form-input" placeholder="Имя" name="name">
+                            <input type="mail" class="form-input" placeholder="Email" name="email">
+                            <textarea name="text" id="" cols="30" rows="1" placeholder="Ваш текст"
+                                class="form-input form-textarea"></textarea>
+                            <button class="form-button btn reset-btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="modal-form__right">
+                        <img src="img/logomodal.png" alt="" class="modal-logo">
+                        <span class="modal-contacts">Наши контакты</span>
+                        <a href="tel:79017920866" class="modal-phone main-text">+7 (901) 792 08 66</a>
+                        <a href="mailto:info@gmail.com" class="modal-email main-text">info@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="modal-close reset-btn" aria-label="Открыть меню">
+				<span class="burger__line"></span>
+				<span class="burger__line"></span>
+				<span class="burger__line"></span>
+			</button>
         </div>
     </div>
 
 
 
 
-
+    <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>
 
