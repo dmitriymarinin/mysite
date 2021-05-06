@@ -160,6 +160,11 @@ input, textarea, button, label {
     height: 45px;
 }
 
+.modal--pc>iframe {
+    max-width: 1440px;
+    height: 80%;
+}
+
 .modal {
     opacity: 0;
     visibility: hidden;
@@ -176,9 +181,17 @@ input, textarea, button, label {
 .modal-form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    /* max-width: 600px; */
     justify-content: center;
     height: 100vh;
+}
+
+.modal--1 {
+    max-width: 600px;
+}
+
+.modal--2 {
+    max-width: 600px;
 }
 
 .modal-overlay {
@@ -201,12 +214,11 @@ input, textarea, button, label {
 .modal-overlay--visible {
     opacity: 1;
     visibility: visible;
-    overflow: hidden;
 }
 
 .modal-close {
     position: absolute;
-    right: 110px;
+    right: 96px;
     top: 25px;
     width: 50px;
     height: 50px;
@@ -217,8 +229,9 @@ input, textarea, button, label {
 }
 
 .disable-scroll {
-    padding-right: 15px;
-    overflow: hidden;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 textarea {
@@ -240,13 +253,14 @@ textarea {
 }
 
 .modal-logo {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    width: 130px;
 }
 
 .modal-form__right {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 50px;
 }
 
@@ -279,9 +293,7 @@ textarea {
     margin-bottom: 15px;
 }
 
-.form-textarea {
-    margin-bottom: 30px;
-}
+.form-textarea {}
 
 .form-input::placeholder {
     color: var(--main-color);
@@ -289,13 +301,14 @@ textarea {
 
 .form-button {
     width: 100%;
+    margin-top: 15px;
 }
 
 .modal-contacts {
     font-family: Russo One;
     font-size: 16px;
     color: var(--main-color);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .modal-phone {
@@ -366,6 +379,11 @@ textarea {
     width: 100%;
     padding: 25px 0;
     z-index: 999;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.header-active {
     background-color: #10243e;
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
@@ -451,6 +469,7 @@ textarea {
     background-size: cover;
     height: 100vh;
     min-height: 720px;
+    margin-left: -1px;
 }
 
 .hero__container {
@@ -735,11 +754,12 @@ textarea {
     height: 100%;
 }
 
-.service__board {
+.board {
+    display: block;
     margin-bottom: 30px;
 }
 
-.service__board-before {
+.board-before {
     color: #8C8C8C;
 }
 
@@ -1174,12 +1194,26 @@ textarea {
     height: 100%;
 }
 
-.portfolio__board {
+.board {
     margin-bottom: 30px;
 }
 
-.portfolio__board-before {
+.board-before {
     color: #8C8C8C;
+}
+
+.title {
+    font-family: Russo One;
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.title-span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
 }
 
 .portfolio__title {
@@ -1263,3 +1297,126 @@ textarea {
     color: var(--main-color);
     margin-bottom: 25px;
 }
+
+/* //portfolio-page */
+
+.portfolio-page {
+    padding-top: 164px;
+    padding-bottom: 80px;
+    background-color: #101f30;
+}
+
+.portfolio-page__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.portfolio-page__wrapper {
+    width: 55%;
+    margin-bottom: 50px;
+}
+
+.portfolio-page__pc {
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.portfolio-page__link {
+    position: relative;
+    padding-left: 70px;
+}
+
+.portfolio-page__arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 15px;
+    background-image: url('../img/icons/arrow-left.png');
+    transform: rotate(180deg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.portfolio-page__descr {
+    margin-bottom: 30px;
+}
+
+.portfolio-page__img {
+    margin-bottom: 50px;
+}
+
+.portfolio-page__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.portfolio-page__item {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.portfolio-page__item-descr {
+    line-height: 22px;
+}
+
+.portfolio-page__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.portfolio-page__item-number {
+    width: 50px;
+    height: 50px;
+    color: var(--main-color);
+    font-family: Russo One;
+    font-size: 24px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    margin-right: 30px;
+}
+
+.portfolio-page__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-page__left {
+    width: 50%;
+}
+
+.portfolio-page__right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-page__iphone {
+    background-image: url('../img/iphone-portfolio.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.portfolio-page__mobile {
+    height: 90%;
+    
+}
+/* portfolio-page */
