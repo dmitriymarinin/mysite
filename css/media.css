@@ -1,0 +1,10 @@
+@media (max-width: 1440px) {
+    .header__mail {
+        display: none;
+    }
+
+    .header__phone {
+        display: none;
+    }
+}
+

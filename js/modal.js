@@ -7,7 +7,7 @@ const body = document.body;
 btns.forEach((el) => {
 	el.addEventListener('click', (e) => {
 		let path = e.currentTarget.getAttribute('data-path');
-		body.classList.add('disable-scroll')
+		body.classList.add('disable-scroll');
 		modals.forEach((el) => {
 			el.classList.remove('modal-visible');
             modalClose.classList.add('modal-close-active');
@@ -27,7 +27,7 @@ modalClose.addEventListener('click', (e) => {
 
 	if (e.target == modalClose) {
 		modalOverlay.classList.remove('modal-overlay--visible');
-		body.classList.remove('disable-scroll')
+		body.classList.remove('disable-scroll');
 		modals.forEach((el) => {
 			el.classList.remove('modal-visible');
 			el.classList.remove('modal-form');

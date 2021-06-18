@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/media-540.css">
+    <link rel="stylesheet" href="css/media-1040.css">
 </head>
 
 <body>
@@ -95,8 +97,7 @@
         <section class="advantages">
             <div class="container advantages__container">
                 <div class="advantages__wrapper">
-                    <h2 class="advantages__title main-text">Какие <br> <span
-                            class="advantages__title-span">преимущества?</span></h2>
+                    <h2 class="title main-text">Какие <br> <span class="title-span">преимущества?</span></h2>
                     <ul class="advantages__list">
                         <li class="advantages__item">
                             <span class="advantages__item-title">Текст</span>
@@ -134,7 +135,7 @@
         <section class="contact">
             <div class="container contact__container">
                 <div class="contact__wrapper">
-                    <h2 class="contact__title">Наши <br><span class="contact__title-span">контакты</span></h2>
+                    <h2 class=" title">Наши <br><span class="title-span">контакты</span></h2>
                     <span class="contact__descr main-text">
                         Хотите сделать что-нибудь отличное? Позвольте вам помочь. Мы составим план,
                         и подготовим предложение.
@@ -212,7 +213,7 @@
                         </span>
                         <form action="#" class="modal-form__form">
                             <input type="text" class="form-input" placeholder="Введите ваш номер" name="phone">
-                            
+
                             <button class="form-button btn reset-btn" type="submit">Отправить</button>
                         </form>
                     </div>
@@ -226,16 +227,48 @@
             </div>
 
             <button class="modal-close reset-btn" aria-label="Открыть меню">
-				<span class="burger__line"></span>
-				<span class="burger__line"></span>
-				<span class="burger__line"></span>
-			</button>
+                
+            </button>
+        </div>
+    </div>
+
+    <div class="menu" aria-hidden="true">
+        <button class="close burger-close reset-btn" aria-label="Открыть меню">
+        </button>
+
+        <span class="burger__title">DMWEB</span>
+        <div class="burger__top">
+            <span class="burger__descr main-text">Хотите сделать что-нибудь отличное? Позвольте вам помочь. Мы составим
+                план,
+                и подготовим предложение.</span>
+                <br>
+            <span class="burger__descr main-text">Готовы? Свяжитесь с нами сегодня.</span>
+            <br>
+            <form action="#" class="burger-form">
+                <input type="text" class="form-input" placeholder="Имя" name="name">
+                <input type="mail" class="form-input" placeholder="Email" name="email">
+                <textarea name="text" id="" cols="30" rows="1" placeholder="Ваш текст"
+                    class="form-input form-textarea"></textarea>
+                <button class="form-button btn reset-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+        <div class="burger__center">
+            <span class="burger__contact main-text">Наши контакты</span>
+            <a href="tel:79017920866" class="burger__tel main-text">+7 (901) 792 08 66</a>
+            <a href="mailto:info@gmail.com" class="burger__mail main-text">info@gmail.com</a>
+        </div>
+        <div class="burger__bottom">
+            <span class="burger__graphic main-text">График работы</span>
+            <span class="burger__graphic-title main-text">Понедельник — Суббота
+                9:00–22:00</span>
+            <span class="burger__graphic-title main-text">Воскресенье — выходной</span>
+            <button class="bell btn reset-btn">Заказать звонок</button>
         </div>
     </div>
 
 
 
-
+    <script src="js/burger.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>

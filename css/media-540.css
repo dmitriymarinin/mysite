@@ -1,0 +1,19 @@
+@media (max-width: 540px) {
+    .modal-wrapper {
+        flex-direction: column;
+    }
+    .modal-form {
+        align-items: center;
+    }
+    .modal-close {
+        right: 50px;
+    }
+    .modal-form__right {
+        display: none;
+    }
+    .modal-form__left {
+        width: 100%;
+        border: none;
+        padding-right: 0;
+    }
+}

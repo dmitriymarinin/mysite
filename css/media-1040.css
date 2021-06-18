@@ -1,0 +1,29 @@
+@media (max-width: 1040px) {
+    .hero__title {
+        font-size: 90px;
+    }
+
+    .hero__title:after {
+        right: 0;
+        top: -170px;
+    }
+
+    .hero__title:before {
+        background-size: contain;
+        width: 150px;
+        height: 150px;
+        left: -130px;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .leaf {
+        display: none;
+    }
+
+    .consultation-wrapper {
+        right: 30px;
+    }
+}
